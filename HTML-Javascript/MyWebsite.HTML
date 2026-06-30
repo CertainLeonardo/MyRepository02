@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #timeDisplay {
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <Header level="##" display="Interactive JavaScript Demo"/>
+    <p id="textParagraph">This is the original paragraph text.</p>
+
+    <!-- Buttons that trigger JavaScript functions -->
+    <button onclick="showAlert()">Trigger Alert</button>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="updateTime()">Show Current Time</button>
+
+    <p>Time status: <span id="timeDisplay">Not checked yet</span></p>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Function 1: Shows a simple browser alert popup
+        function showAlert() {
+            alert("Hello! This is a JavaScript alert box.");
+        }
+
+        // Function 2: Finds an HTML element by its ID and modifies its text content
+        function changeText() {
+            const paragraph = document.getElementById("textParagraph");
+            paragraph.textContent = "The text has been successfully changed by JavaScript!";
+        }
+
+        // Function 3: Generates the current date and time and displays it on the page
+        function updateTime() {
+            const timeSpan = document.getElementById("timeDisplay");
+            const now = new Date();
+            timeSpan.textContent = now.toLocaleTimeString();
+        }
+    </script>
+
+</body>
+</html>
